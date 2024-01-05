@@ -1,0 +1,18 @@
+name: zigbee2mqtt
+summary: Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges
+adopt-info: zigbee2mqtt
+description: |
+  Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges.
+  Zigbee2MQTT supports various Zigbee adapters and a big bunch of devices.
+  Zigbee2MQTT integrates well with most home automation solutions because it uses MQTT.
+  Zigbee2MQTT is licenced under the free GNU General Public License 3.
+
+license: GPL-3.0
+confinement: strict
+grade: stable
+architectures:
+  - build-on: armhf
+  - build-on: arm64
+  - build-on: amd64
+
+base: core22
