@@ -17,6 +17,16 @@ architectures:
 
 base: core22
 
+apps:
+  zigbee2mqtt:
+    command: opt/zigbee2mqtt/bin/zigbee2mqtt
+    daemon: simple
+    restart-condition: always
+    plugs:
+      - network
+      - network-bind
+      - serial-port
+
 parts:
   zigbee2mqtt:
     after:
