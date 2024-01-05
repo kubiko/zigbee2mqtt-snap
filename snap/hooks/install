@@ -1,0 +1,4 @@
+#!/bin/sh
+
+logger "$(date '+%Y-%m-%d %H:%M:%S') $0: Entering hook"
+cp -r ${SNAP}/opt/zigbee2mqtt/lib/node_modules/zigbee2mqtt/data/* ${SNAP_DATA}
