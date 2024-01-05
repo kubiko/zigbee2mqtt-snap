@@ -27,6 +27,7 @@ apps:
     command: opt/zigbee2mqtt/bin/zigbee2mqtt
     daemon: simple
     restart-condition: always
+    install-mode: disable
     plugs:
       - network
       - network-bind
