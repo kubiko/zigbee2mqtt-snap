@@ -16,3 +16,7 @@ architectures:
   - build-on: amd64
 
 base: core22
+
+build-packages:
+  - python3
+  - python3-distutils
