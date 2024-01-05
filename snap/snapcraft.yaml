@@ -18,6 +18,18 @@ architectures:
 base: core22
 
 parts:
+  zigbee2mqtt:
+    after:
+      - node
+    plugin: nil
+    build-environment:
+      - PATH: "${PATH}:${CRAFT_STAGE}/opt/zigbee2mqtt/bin"
+    override-build: |
+      mkdir -p ${CRAFT_PART_INSTALL}/opt/zigbee2mqtt
+      npm install --global --prefix ${CRAFT_PART_INSTALL}/opt/zigbee2mqtt zigbee2mqtt
+      package=$(npm list --global --prefix ${CRAFT_PART_INSTALL}/opt/zigbee2mqtt | grep "── zigbee2mqtt")
+      craftctl set version=${package#*@}
+
   node:
     plugin: nil
     stage-snaps:
