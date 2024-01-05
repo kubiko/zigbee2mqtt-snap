@@ -17,6 +17,16 @@ architectures:
 
 base: core22
 
+parts:
+  node:
+    plugin: nil
+    stage-snaps:
+      - node/20/stable
+    organize:
+      '*': opt/zigbee2mqtt/
+    prime:
+      - -opt/zigbee2mqtt/include
+
 build-packages:
   - python3
   - python3-distutils
