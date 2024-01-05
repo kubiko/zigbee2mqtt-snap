@@ -17,6 +17,11 @@ architectures:
 
 base: core22
 
+environment:
+  npm_config_prefix: "$SNAP/opt/zigbee2mqtt"
+  PATH:              "$SNAP/opt/zigbee2mqtt/bin:$PATH"
+  ZIGBEE2MQTT_DATA:  "$SNAP_DATA"
+
 apps:
   zigbee2mqtt:
     command: opt/zigbee2mqtt/bin/zigbee2mqtt
